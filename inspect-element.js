@@ -5,7 +5,7 @@ function btn(icon,label,desc,fn){let b=el('button');b.style.cssText='display:blo
 function sec(t){let d=el('div','font-size:10px;color:#555588;margin:8px 0 4px;text-transform:uppercase;letter-spacing:1px',t);return d}
 function tog(label,fn){let row=el('div','display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid #1a1a3a');let lbl=el('span','font-size:12px;color:#aaaacc',label);let t=el('div','width:32px;height:17px;background:#2a2a5a;border-radius:9px;cursor:pointer;position:relative');let knob=el('div','width:13px;height:13px;background:#fff;border-radius:50%;position:absolute;top:2px;left:2px;transition:left .2s');t.appendChild(knob);t.onclick=()=>{let on=t.dataset.on=t.dataset.on==='1'?'0':'1';t.style.background=on==='1'?'#4444aa':'#2a2a5a';knob.style.left=on==='1'?'17px':'2px';fn(on==='1')};row.append(lbl,t);return row}
 
-let p=el('div','position:fixed;top:60px;left:60px;width:320px;background:#1a1a2e;border:1px solid #4a4a8a;border-radius:12px;font-family:monospace;z-index:999999;box-shadow:0 8px 32px rgba(0,0,0,.6);color:#e0e0ff;user-select:none');
+let p=el('div','position:fixed;top:60px;left:60px;width:380px;background:#0f0f23;border:1px solid #4a4a8a;border-radius:12px;font-family:monospace;z-index:999999;box-shadow:0 8px 32px rgba(0,0,0,.6);color:#e0e0ff;user-select:none');
 p.id='__dp';
 
 // Titlebar
@@ -16,7 +16,7 @@ let dy=el('div','width:12px;height:12px;border-radius:50%;background:#febc2e');
 let dg=el('div','width:12px;height:12px;border-radius:50%;background:#28c840');
 dots.append(dr,dy,dg);
 let tt=el('span','font-size:12px;color:#8888bb;letter-spacing:1px','⚡ DEVTOOLS+');
-let ver=el('span','font-size:10px;color:#444466','v1.1');
+let ver=el('span','font-size:10px;color:#444466','v1.2');
 tb.append(dots,tt,ver);
 
 // Tabs
@@ -49,7 +49,9 @@ te.append(
   btn('🔡','Crazy Fonts','Apply random fonts to all elements',()=>__fonts()),
   sec('Network'),
   btn('📡','Ping Test','Measure response time to google.com',()=>__ping()),
-  btn('🌐','Show IP Info','Fetch your public IP + location',()=>__ip())
+  btn('🌐','Show IP Info','Fetch your public IP + location',()=>__ip()),
+  sec('Games'),
+  btn('🎮','Blooket Cheats','Activate Blooket cheats GUI',()=>__blooket())
 );
 
 // --- Console ---
