@@ -32,25 +32,6 @@ let body=el('div','padding:12px;max-height:400px;overflow-y:auto');
 // --- Executables ---
 let te=el('div');
 te.append(
-  sec('Fun'),
-  btn('🌧','Matrix Rain','Animated matrix effect over the page',()=>__rain()),
-  btn('❄️','Make it Snow','Snowflakes fall across the screen',()=>__snow()),
-  btn('💥','Page Quake','Shake the entire page',()=>__shake()),
-  btn('🎉','Emoji Storm','Random emojis rain down',()=>__emoji()),
-  sec('Info'),
-  btn('🍪','Show Cookies','Dump all page cookies',()=>__cookies()),
-  btn('💾','LocalStorage Dump','List all localStorage keys/values',()=>__ls()),
-  btn('🖼','List All Images','Enumerate every img src on page',()=>__imgs()),
-  btn('🔗','List All Links','Dump every href on page',()=>__links()),
-  sec('Page Edit'),
-  btn('✏️','Edit Any Text','Click any text on page to edit it',()=>__edit()),
-  btn('🌀','Invert Colors','CSS invert filter toggle',()=>__invert()),
-  btn('🪞','Mirror Page','Flip the entire page horizontally',()=>__mirror()),
-  btn('🔡','Crazy Fonts','Apply random fonts to all elements',()=>__fonts()),
-  sec('Network'),
-  btn('📡','Ping Test','Measure response time to google.com',()=>__ping()),
-  btn('🌐','Show IP Info','Fetch your public IP + location',()=>__ip()),
-  sec('Games'),
   btn('🎮','Blooket Cheats','Activate Blooket cheats GUI',()=>__blooket())
 );
 
